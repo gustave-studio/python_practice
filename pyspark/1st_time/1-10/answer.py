@@ -28,32 +28,32 @@ spark = SparkSession.builder \
 df_category = spark.read\
               .format("csv")\
               .options(header="true", inferSchema="true")\
-              .load('data/category.csv')
+              .load('pyspark/100knocks-preprocess/docker/work/data/category.csv')
 
 df_customer = spark.read\
               .format("csv")\
               .options(header="true", inferSchema="true")\
-              .load('data/customer.csv')
+              .load('pyspark/100knocks-preprocess/docker/work/data/customer.csv')
 
 df_geocode = spark.read\
               .format("csv")\
               .options(header="true", inferSchema="true")\
-              .load('data/geocode.csv')
+              .load('pyspark/100knocks-preprocess/docker/work/data/geocode.csv')
 
 df_product = spark.read\
               .format("csv")\
               .options(header="true", inferSchema="true")\
-              .load('data/product.csv')
+              .load('pyspark/100knocks-preprocess/docker/work/data/product.csv')
 
 df_receipt = spark.read\
               .format("csv")\
               .options(header="true", inferSchema="true")\
-              .load('data/receipt.csv')
+              .load('pyspark/100knocks-preprocess/docker/work/data/receipt.csv')
 
 df_store = spark.read\
               .format("csv")\
               .options(header="true", inferSchema="true")\
-              .load('data/store.csv')
+              .load('pyspark/100knocks-preprocess/docker/work/data/store.csv')
 
 print('# P-001 ----------')
 df_receipt.show(10, truncate=False)
